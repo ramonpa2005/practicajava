@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Practica1</title>
+	<link rel="stylesheet" href="">
+
+</head>
+<body>
+	
+
+	Producto 1(10$)<input onclick="suma(10,1)" type="checkbox" id= "producto1">
+	<br>
+	Producto 2(20$)<input onclick="suma(20,2)" type="checkbox" id="producto2">
+	<br>
+	Producto 3(15$)<input onclick="suma(15,3)" type="checkbox" id="producto3">
+	<br>
+	Producto 4(14$)<input onclick="suma(14,4)" type="checkbox" id="producto4">
+	<br>
+	Producto 5(15$)<input onclick="suma(15,5)" type="checkbox" id="producto5">
+	<br>
+	Producto 6(10$)<input onclick="suma(10,6)" type="checkbox" id="producto6">
+	<br>
+	Producto 7(12$)<input onclick="suma(12,7)" type="checkbox" id="producto7">
+	<br>
+	Producto 8(20$)<input onclick="suma(20,8)" type="checkbox" id="producto8">
+	<br>
+	Total:<input type="text" id="resultado" value="0">
+	<br>
+
+	<script >
+		function suma(a,indice){
+			var checked=document.getElementById('producto'+indice).checked;
+			if (checked==true) {
+				document.getElementById('resultado').value = parseInt(document.getElementById('resultado').value)+a;
+			}else {
+				document.getElementById('resultado').value=parseInt(document.getElementById('resultado').value)-a;
+			}
+			
+		}
+
+	</script>
+</body>
+</html>
